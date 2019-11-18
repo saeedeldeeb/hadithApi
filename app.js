@@ -3,10 +3,13 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+//------------
+const readingBooks = require('./routes/readingBooks')
+const langs = require('./routes/langs')
+const readingChapters = require('./routes/readingChapters')
+const readingAhadith = require('./routes/readingAhadith')
 var app = express();
 
 // view engine setup
@@ -18,6 +21,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+//----------------
+app.use('/api',[readingBooks,langs,readingChapters,readingAhadith]);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -35,7 +40,9 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  console.log(err);
+  
+  res.send({"code":err.status,"status":err.message,"data":"Invalid endpoint or resource."})
 });
 
 module.exports = app;
