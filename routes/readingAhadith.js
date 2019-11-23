@@ -29,7 +29,7 @@ router.get('/ahadith/:bookid/:chapterid/:lan', (req, res) => {
         return res.status(404);
 
     let sql = `SELECT Hadith_ID,${lan.lan},${lan.sanad} FROM Ahadith where Book_ID = ${req.params.bookid} and Chapter_ID = ${req.params.chapterid}`;
-
+try{
     db.all(sql, [], (err, rows) => {
         if (err) { throw err; }
 
@@ -38,6 +38,7 @@ router.get('/ahadith/:bookid/:chapterid/:lan', (req, res) => {
         });
         res.send({ code: res.statusCode, status: res.statusMessage, Chapter: result });
     });
+}catch(err){throw Error('Not Valid')}
 })
 router.get('/search/ahadith/:key/:lan', (req, res) => {
 
