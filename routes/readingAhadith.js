@@ -39,7 +39,7 @@ router.get('/ahadith/:bookid/:chapterid/:lan', (req, res) => {
         res.send({ code: res.statusCode, status: res.statusMessage, Chapter: result });
     });
 })
-router.get('/ahadith/search/:key/:lan', (req, res) => {
+router.get('/search/ahadith/:key/:lan', (req, res) => {
 
     let result = [];
     let lan = selectedLanguage(req.params.lan);

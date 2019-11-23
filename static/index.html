@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa&display=swap" rel="stylesheet">
@@ -14,19 +16,21 @@
 
 
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-      
+
         <div class="collapse navbar-collapse" id="navbarColor01">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">API <span class="sr-only">(current)</span></a>
-            </li>
-          </ul>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">API <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
         </div>
     </nav>
     <div class="container">
@@ -37,23 +41,25 @@
             Hadith API Documentation
         </h4>
         <p>
-            The following endpoints are supported by the Hadith API. They all support the HTTP GET method and return JSON.    
+            The following endpoints are supported by the Hadith API. They all support the HTTP GET method and return
+            JSON.
         </p>
 
         <!-- this is the down list -->
 
         <div class="accordion" id="accordionExample">
-                <div class="card">
-                  <div class="card-header bg-primary" id="headingOne">
+            <div class="card">
+                <div class="card-header bg-primary" id="headingOne">
                     <h5 class="mb-0">
-                            <span class="badge badge-danger">GET</span>
-                      <button class="btn btn-link text-light" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <span class="badge badge-danger">GET</span>
+                        <button class="btn btn-link text-light" type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                             Edition - Available languages editions
-                      </button>
+                        </button>
                     </h5>
-                  </div>
-              
-                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                     <div class="card-body">
                         <p>
                             All these endpoints give you a JSON object describing an edition languages.
@@ -69,8 +75,8 @@
                                 Example
                             </div>
                         </div>
-                        
-                            <div class="row">
+
+                        <div class="row">
                             <div class="col-md-4">
                                 https://ahadith-api.herokuapp.com/api/language
                             </div>
@@ -78,10 +84,11 @@
                                 Lists all languages in this edition are available
                             </div>
                             <div class="col-md-4">
-                                <a href="https://ahadith-api.herokuapp.com/api/language" target="_blank">https://ahadith-api.herokuapp.com/api/language</a>
+                                <a href="https://ahadith-api.herokuapp.com/api/language"
+                                    target="_blank">https://ahadith-api.herokuapp.com/api/language</a>
                             </div>
                         </div>
-                        
+
                     </div>
 
                 </div>
@@ -92,10 +99,11 @@
             <div class="card">
                 <div class="card-header bg-primary" id="headingTwo">
                     <h5 class="mb-0">
-                            <span class="badge badge-danger">GET</span>
-                    <button class="btn btn-link text-light" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <span class="badge badge-danger">GET</span>
+                        <button class="btn btn-link text-light" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                             Books - Get All Available Books
-                    </button>
+                        </button>
                     </h5>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
@@ -107,289 +115,330 @@
                             <div class="col-md-4 bold">
                                 Endpoint
                                 <div class="col-md-4 bold">
-                            </div>
+                                </div>
                                 Description
                             </div>
                             <div class="col-md-4 bold">
                                 Example
                             </div>
                         </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    1. https://ahadith-api.herokuapp.com/api/books/{{language}}
-                                </div>
-                                <div class="col-md-4">
-                                    Lists all available books. You can filter the results using the parameters below.
-                                    <h4>
-                                        Parameters
-                                    </h4>
-                                    <p>language - A 2 digit language code. Example: 'en', 'ar'.</p>
-                                </div>
-                                <div class="col-md-4">
-                                    <ol>
-                                        <li>
-                                            <a href="https://ahadith-api.herokuapp.com/api/books/ar" target="_blank">https://ahadith-api.herokuapp.com/api/books/ar</a>
-                                        </li>
-                                        <li>
-                                        <a href="https://ahadith-api.herokuapp.com/api/books/en" target="_blank">https://ahadith-api.herokuapp.com/api/books/en</a>
-                                        </li>
-                                    </ol>
-                                </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                1. https://ahadith-api.herokuapp.com/api/books/{{language}}
+                            </div>
+                            <div class="col-md-4">
+                                Lists all available books. You can filter the results using the parameters below.
+                                <h4>
+                                    Parameters
+                                </h4>
+                                <p>language - A 2 digit language code. Example: 'en', 'ar'.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <ol>
+                                    <li>
+                                        <a href="https://ahadith-api.herokuapp.com/api/books/ar"
+                                            target="_blank">https://ahadith-api.herokuapp.com/api/books/ar</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://ahadith-api.herokuapp.com/api/books/en"
+                                            target="_blank">https://ahadith-api.herokuapp.com/api/books/en</a>
+                                    </li>
+                                </ol>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- /. end of card -->                        
+            </div>
+            <!-- /. end of card -->
 
-                        <div class="card">
-                                <div class="card-header bg-primary" id="headingThree">
-                                  <h5 class="mb-0">
-                                          <span class="badge badge-danger">GET</span>
-                                    <button class="btn btn-link text-light" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            Chapters - Get a Chapter of Book
-                                    </button>
-                                  </h5>
-                                </div>
-                            
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                                  <div class="card-body">
-                            <p>
-                                All these endpoints give you a JSON object listing all chapters with differ responses.
-                            </p>
-                            <div class="row">
-                                <div class="col-md-4 bold">
-                                    Endpoint
-                                </div>
-                                <div class="col-md-4 bold">
-                                    Description
-                                </div>
-                                <div class="col-md-4 bold">
-                                    Example
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    1. https://ahadith-api.herokuapp.com/api/chapter/all/{{language}}
-                                </div>
-                                <div class="col-md-4">
-                                    Lists all available chapters. You can filter the results using the parameters below.
-                                    <h4>
-                                        Parameters
-                                    </h4>
-                                    <p>language - A 2 digit language code. Example: 'en', 'ar'.</p>   
-                                </div>
-                                <div class="col-md-4">
-                                    <ol>
-                                        <li>
-                                            <a href="https://ahadith-api.herokuapp.com/api/chapter/all/ar" target="_blank">https://ahadith-api.herokuapp.com/api/chapter/all/ar</a> - Lists all chapters in Arabic.
-                                        </li>
-                                        <li>
-                                        <a href="https://ahadith-api.herokuapp.com/api/chapters/all/en" target="_blank">https://ahadith-api.herokuapp.com/api/chapters/all/en</a> - Lists all chapters in English.
-                                        </li>
-                                    </ol>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    2. https://ahadith-api.herokuapp.com/api/chapter/{{bookid}}/{{language}}
-                                </div>
-                                <div class="col-md-4">
-                                    Lists all chapters in which Book are available.
-                                </div>
-                                <div class="col-md-4">
-                                    <a href="https://ahadith-api.herokuapp.com/api/chapter/10/ar" target="_blank">https://ahadith-api.herokuapp.com/api/chapter/10/ar</a> - Chapters in book 10 in Arabic.
-                                    <a href="https://ahadith-api.herokuapp.com/api/chapter/1/en" target="_blank">https://ahadith-api.herokuapp.com/api/chapter/1/en</a> - Chapters in book 1 in English.
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <!--/.end of card-->
-
-                        <div class="card">
-                            <div class="card-header bg-primary" id="headingFour">
-                                <h5 class="mb-0">
-                                        <span class="badge badge-danger">GET</span>
-                                <button class="btn btn-link text-light" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        Chapter Intro - Get the Intro of specific chapter.
-                                </button>
-                                </h5>
-                            </div>
-                        
-                            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <p>
-                                        All these endpoints give you a JSON object describing Chapter Introduction.
-                                    </p>
-                                    <div class="row">
-                                        <div class="col-md-4 bold">
-                                            Endpoint
-                                        </div>
-                                        <div class="col-md-4 bold">
-                                            Description
-                                        </div>
-                                        <div class="col-md-4 bold">
-                                            Example
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            1. https://ahadith-api.herokuapp.com/api/chapter/intro/{{bookid}}/{{chapterid}}
-                                        </div>
-                                        <div class="col-md-4">
-                                            Gets chapter Introduction. You can filter the results using the parameters below.
-                                            <h4>
-                                                Parameters
-                                            </h4>
-                                            <ul>
-                                                <li>bookid -  Specify a book.</li>
-                                                <li>chapterid - Specify the chapter.</li>                
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <ul>
-                                                <li>
-                                                    <a href="https://ahadith-api.herokuapp.com/api/chapter/intro/1/6" target="_blank">https://ahadith-api.herokuapp.com/api/chapter/intro/1/6</a> - Gets chapter 6 intro in book 1.
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/.end of card-->
-
-                        <div class="card">
-                            <div class="card-header bg-primary" id="headingFive">
-                                <h5 class="mb-0">
-                                        <span class="badge badge-danger">GET</span>
-                                <button class="btn btn-link text-light" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                        Hadith - Get Ahadith of Chapter
-                                </button>
-                                </h5>
-                            </div>
-                        
-                            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-                                <div class="card-body">
-                                    <p>
-                                        All these endpoints give you a JSON object listing Ahadith.
-                                    </p>
-                                    <div class="row">
-                                        <div class="col-md-4 bold">
-                                            Endpoint
-                                        </div>
-                                        <div class="col-md-4 bold">
-                                            Description
-                                        </div>
-                                        <div class="col-md-4 bold">
-                                            Example
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            1. https://ahadith-api.herokuapp.com/api/ahadith/all/{{language}}
-                                        </div>
-                                        <div class="col-md-4">
-                                            Lists all available ahadith. You can filter the results using the parameters below.
-                                            <h4>
-                                                Parameters
-                                            </h4>
-                                            <ul> language
-                                                <li>en -  For English</li>
-                                                <li>ar-tashkeel - For Arabic with tashkeel.</li>
-                                                <li>ar-noTashkeel - For Arabic without tashkeel.</li>
-                
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <ol>
-                                                <li>
-                                                    <a href="https://ahadith-api.herokuapp.com/api/ahadith/all/en" target="_blank">https://ahadith-api.herokuapp.com/api/ahadith/all/en</a> - Lists all Ahadith in English.
-                                                </li>
-                                                <li>
-                                                <a href="https://ahadith-api.herokuapp.com/api/ahadith/all/ar-tashkeel" target="_blank">https://ahadith-api.herokuapp.com/api/ahadith/all/ar-tashkeel</a> - Lists all Ahadith in Arabic with tashkeel.
-                                                </li>
-                                                <li>
-                                                <a href="https://ahadith-api.herokuapp.com/api/ahadith/all/ar-notashkeel" target="_blank">https://ahadith-api.herokuapp.com/api/ahadith/all/ar-notashkeel</a> - Lists all Ahadith in Arabic without tashkeel.
-                                                </li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            2. https://ahadith-api.herokuapp.com/api/ahadith/{{bookid}}/{{chapterid}}/{{language}}
-                                        </div>
-                                        <div class="col-md-4">
-                                            Lists all Ahadith in which chapter are available
-                                        </div>
-                                        <div class="col-md-4">
-                                            <a href="https://ahadith-api.herokuapp.com/api/ahadith/1/1/ar-notashkeel" target="_blank">https://ahadith-api.herokuapp.com/api/ahadith/1/1/ar-notashkeel</a> - List Ahadith of Chappter 1 in book 1.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--/.end of card-->
-
-                        <div class="card">
-                            <div class="card-header bg-primary" id="headingSix">
-                                <h5 class="mb-0">
-                                <span class="badge badge-danger">GET</span>
-                        <button class="btn btn-link text-light" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                Search - Search the text of Ahadith
+            <div class="card">
+                <div class="card-header bg-primary" id="headingThree">
+                    <h5 class="mb-0">
+                        <span class="badge badge-danger">GET</span>
+                        <button class="btn btn-link text-light" type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Chapters - Get a Chapter of Book
                         </button>
-                        </h5>
-                    </div>
-                
-                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <p>
-                                All these endpoints give you a JSON object listing all Ahadith that have your word.
-                            </p>
-                            <div class="row">
-                                <div class="col-md-4 bold">
-                                    Endpoint
-                                </div>
-                                <div class="col-md-4 bold">
-                                    Description
-                                </div>
-                                <div class="col-md-4 bold">
-                                    Example
-                                </div>
+                    </h5>
+                </div>
+
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>
+                            All these endpoints give you a JSON object listing all chapters with differ responses.
+                        </p>
+                        <div class="row">
+                            <div class="col-md-4 bold">
+                                Endpoint
                             </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    1. https://ahadith-api.herokuapp.com/api/ahadith/search/{{keyword}}/{{language}}
-                                </div>
-                                <div class="col-md-4">
-                                    Lists all available Ahadith with this keyword.
-                                </div>
-                                <div class="col-md-4">
-                                    <ol>
-                                        <li>
-                                            <a href="https://ahadith-api.herokuapp.com/api/ahadith/search/Messenger/en" target="_blank">https://ahadith-api.herokuapp.com/api/ahadith/search/Messenger/en</a> - Lists all Ahadith with "Messenger" keyword.
-                                        </li>
-                                        <li>
-                                        <a href="https://ahadith-api.herokuapp.com/api/ahadith/search/الله/ar-notashkeel" target="_blank">https://ahadith-api.herokuapp.com/api/ahadith/search/الله/ar-notashkeel</a> - Lists all Ahadith with "الله" keyword.
-                                        </li>
-                                    </ol>        
-                                </div>
-                                </div>
+                            <div class="col-md-4 bold">
+                                Description
+                            </div>
+                            <div class="col-md-4 bold">
+                                Example
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                1. https://ahadith-api.herokuapp.com/api/chapter/all/{{language}}
+                            </div>
+                            <div class="col-md-4">
+                                Lists all available chapters. You can filter the results using the parameters below.
+                                <h4>
+                                    Parameters
+                                </h4>
+                                <p>language - A 2 digit language code. Example: 'en', 'ar'.</p>
+                            </div>
+                            <div class="col-md-4">
+                                <ol>
+                                    <li>
+                                        <a href="https://ahadith-api.herokuapp.com/api/chapter/all/ar"
+                                            target="_blank">https://ahadith-api.herokuapp.com/api/chapter/all/ar</a> -
+                                        Lists all chapters in Arabic.
+                                    </li>
+                                    <li>
+                                        <a href="https://ahadith-api.herokuapp.com/api/chapter/all/en"
+                                            target="_blank">https://ahadith-api.herokuapp.com/api/chapters/all/en</a> -
+                                        Lists all chapters in English.
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                2. https://ahadith-api.herokuapp.com/api/chapter/{{bookid}}/{{language}}
+                            </div>
+                            <div class="col-md-4">
+                                Lists all chapters in which Book are available.
+                            </div>
+                            <div class="col-md-4">
+                                <ol>
+                                    <li>
+                                        <a href="https://ahadith-api.herokuapp.com/api/chapter/10/ar"
+                                            target="_blank">https://ahadith-api.herokuapp.com/api/chapter/10/ar</a> -
+                                        Chapters in book 10 in Arabic.
+                                    </li>
+                                    <li>
+                                        <a href="https://ahadith-api.herokuapp.com/api/chapter/1/en"
+                                            target="_blank">https://ahadith-api.herokuapp.com/api/chapter/1/en</a> -
+                                        Chapters in book 1 in English.
+                                    </li>
+                                </ol>
                             </div>
                         </div>
                     </div>
-                    <!--/.end of card-->                                           
-                    </div>       
-        
+
+                </div>
+
+            </div>
+            <!--/.end of card-->
+
+            <div class="card">
+                <div class="card-header bg-primary" id="headingFour">
+                    <h5 class="mb-0">
+                        <span class="badge badge-danger">GET</span>
+                        <button class="btn btn-link text-light" type="button" data-toggle="collapse"
+                            data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Chapter Intro - Get the Intro of specific chapter.
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>
+                            All these endpoints give you a JSON object describing Chapter Introduction.
+                        </p>
+                        <div class="row">
+                            <div class="col-md-4 bold">
+                                Endpoint
+                            </div>
+                            <div class="col-md-4 bold">
+                                Description
+                            </div>
+                            <div class="col-md-4 bold">
+                                Example
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                1. https://ahadith-api.herokuapp.com/api/chapter/intro/{{bookid}}/{{chapterid}}
+                            </div>
+                            <div class="col-md-4">
+                                Gets chapter Introduction. You can filter the results using the parameters below.
+                                <h4>
+                                    Parameters
+                                </h4>
+                                <ul>
+                                    <li>bookid - Specify a book.</li>
+                                    <li>chapterid - Specify the chapter.</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <ul>
+                                    <li>
+                                        <a href="https://ahadith-api.herokuapp.com/api/chapter/intro/1/6"
+                                            target="_blank">https://ahadith-api.herokuapp.com/api/chapter/intro/1/6</a>
+                                        - Gets chapter 6 intro in book 1.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/.end of card-->
+
+            <div class="card">
+                <div class="card-header bg-primary" id="headingFive">
+                    <h5 class="mb-0">
+                        <span class="badge badge-danger">GET</span>
+                        <button class="btn btn-link text-light" type="button" data-toggle="collapse"
+                            data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Hadith - Get Ahadith of Chapter
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>
+                            All these endpoints give you a JSON object listing Ahadith.
+                        </p>
+                        <div class="row">
+                            <div class="col-md-4 bold">
+                                Endpoint
+                            </div>
+                            <div class="col-md-4 bold">
+                                Description
+                            </div>
+                            <div class="col-md-4 bold">
+                                Example
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                1. https://ahadith-api.herokuapp.com/api/ahadith/all/{{language}}
+                            </div>
+                            <div class="col-md-4">
+                                Lists all available ahadith. You can filter the results using the parameters below.
+                                <h4>
+                                    Parameters
+                                </h4>
+                                <ul> language
+                                    <li>en - For English</li>
+                                    <li>ar-tashkeel - For Arabic with tashkeel.</li>
+                                    <li>ar-noTashkeel - For Arabic without tashkeel.</li>
+
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <ol>
+                                    <li>
+                                        <a href="https://ahadith-api.herokuapp.com/api/ahadith/all/en"
+                                            target="_blank">https://ahadith-api.herokuapp.com/api/ahadith/all/en</a> -
+                                        Lists all Ahadith in English.
+                                    </li>
+                                    <li>
+                                        <a href="https://ahadith-api.herokuapp.com/api/ahadith/all/ar-tashkeel"
+                                            target="_blank">https://ahadith-api.herokuapp.com/api/ahadith/all/ar-tashkeel</a>
+                                        - Lists all Ahadith in Arabic with tashkeel.
+                                    </li>
+                                    <li>
+                                        <a href="https://ahadith-api.herokuapp.com/api/ahadith/all/ar-notashkeel"
+                                            target="_blank">https://ahadith-api.herokuapp.com/api/ahadith/all/ar-notashkeel</a>
+                                        - Lists all Ahadith in Arabic without tashkeel.
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                2. https://ahadith-api.herokuapp.com/api/ahadith/{{bookid}}/{{chapterid}}/{{language}}
+                            </div>
+                            <div class="col-md-4">
+                                Lists all Ahadith in which chapter are available
+                            </div>
+                            <div class="col-md-4">
+                                <a href="https://ahadith-api.herokuapp.com/api/ahadith/1/1/ar-notashkeel"
+                                    target="_blank">https://ahadith-api.herokuapp.com/api/ahadith/1/1/ar-notashkeel</a>
+                                - List Ahadith of Chappter 1 in book 1.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/.end of card-->
+
+            <div class="card">
+                <div class="card-header bg-primary" id="headingSix">
+                    <h5 class="mb-0">
+                        <span class="badge badge-danger">GET</span>
+                        <button class="btn btn-link text-light" type="button" data-toggle="collapse"
+                            data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Search - Search the text of Ahadith
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p>
+                            All these endpoints give you a JSON object listing all Ahadith that have your word.
+                        </p>
+                        <div class="row">
+                            <div class="col-md-4 bold">
+                                Endpoint
+                            </div>
+                            <div class="col-md-4 bold">
+                                Description
+                            </div>
+                            <div class="col-md-4 bold">
+                                Example
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                1. https://ahadith-api.herokuapp.com/api/search/ahadith/{{keyword}}/{{language}}
+                            </div>
+                            <div class="col-md-4">
+                                Lists all available Ahadith with this keyword.
+                            </div>
+                            <div class="col-md-4">
+                                <ol>
+                                    <li>
+                                        <a href="https://ahadith-api.herokuapp.com/api/search/ahadith/Messenger/en"
+                                            target="_blank">https://ahadith-api.herokuapp.com/api/search/ahadith/Messenger/en</a>
+                                        - Lists all Ahadith with "Messenger" keyword.
+                                    </li>
+                                    <li>
+                                        <a href="https://ahadith-api.herokuapp.com/api/search/ahadith/الله/ar-notashkeel"
+                                            target="_blank">https://ahadith-api.herokuapp.com/api/search/ahadith/الله/ar-notashkeel</a>
+                                        - Lists all Ahadith with "الله" keyword.
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/.end of card-->
+        </div>
+
     </div>
     <!--./ end of container-->
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
- 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
