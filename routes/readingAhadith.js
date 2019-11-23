@@ -25,11 +25,11 @@ router.get('/ahadith/:bookid/:chapterid/:lan', (req, res) => {
 
     let result = [];
     let lan = selectedLanguage(req.params.lan);
-    if (lan == 'Not supported')
+    if (lan == 'Not supported' || isNaN(req.params.bookid) || isNaN(req.params.chapterid))
         return res.status(404);
 
     let sql = `SELECT Hadith_ID,${lan.lan},${lan.sanad} FROM Ahadith where Book_ID = ${req.params.bookid} and Chapter_ID = ${req.params.chapterid}`;
-try{
+
     db.all(sql, [], (err, rows) => {
         if (err) { throw err; }
 
@@ -38,7 +38,6 @@ try{
         });
         res.send({ code: res.statusCode, status: res.statusMessage, Chapter: result });
     });
-}catch(err){throw Error('Not Valid')}
 })
 router.get('/search/ahadith/:key/:lan', (req, res) => {
 
