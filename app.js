@@ -12,10 +12,15 @@ const readingChapters = require('./routes/readingChapters')
 const readingAhadith = require('./routes/readingAhadith')
 var app = express();
 
+require('./prod')(app);
+//static Api page
+app.use(express.static(path.join(__dirname,"static")));
+app.get('/',(req,res)=>{
+  res.status(200).sendFile(path.join(__dirname,"static","index.html"));
+})
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

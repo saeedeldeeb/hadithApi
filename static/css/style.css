@@ -1,0 +1,33 @@
+body{
+    background-image: linear-gradient(to right, #eeeeeecc, #cccccccc), url('../imgs/islamic-background-ornament-4.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    line-height: 1.846;
+    color: #666666;
+}
+.container{
+    margin-top: 5px;
+    background-color: #ffffffcc;
+    height: auto;
+    min-height: 90vh;
+}
+.align-center{
+    text-align: center;
+}
+.font-Aref{
+    font-family: 'Aref Ruqaa', 'serif'
+}
+h4{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.1;
+    color: #444;
+}
+h5, .btn-link{
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
