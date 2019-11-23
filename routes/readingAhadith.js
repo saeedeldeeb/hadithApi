@@ -39,7 +39,7 @@ router.get('/ahadith/:bookid/:chapterid/:lan', (req, res) => {
         res.send({ code: res.statusCode, status: res.statusMessage, Chapter: result });
     });
 })
-router.get('/ahadithSearch/:key/:lan', (req, res) => {
+router.get('/ahadith/search/:key/:lan', (req, res) => {
 
     let result = [];
     let lan = selectedLanguage(req.params.lan);
@@ -70,7 +70,7 @@ function selectedLanguage(parameter) {
             lan = 'Ar_Text';
             sanad = 'Ar_Sanad_1'
             break;
-        case 'ar-noTashkeel':
+        case 'ar-notashkeel':
             lan = 'Ar_Text_Without_Tashkeel';
             sanad = 'Ar_Sanad_Without_Tashkeel'
             break;

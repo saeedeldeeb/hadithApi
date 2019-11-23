@@ -3,7 +3,7 @@ const { selectedLanguage } = require('../db/languages')
 const express = require('express');
 const router = express.Router();
 
-router.get('/chapters/all/:lan', (req, res) => {
+router.get('/chapter/all/:lan', (req, res) => {
     let result = [];
     let lan = selectedLanguage(req.params.lan);
     if (lan == 'Not supported')
