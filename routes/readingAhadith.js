@@ -27,7 +27,7 @@ router.get('/ahadith/:bookid/:chapterid/:lan', (req, res) => {
     let lan = selectedLanguage(req.params.lan);
     console.log(isNaN(req.params.bookid));
     
-    if (lan == 'Not supported' || isNaN(req.params.bookid) || isNaN(req.params.chapterid))
+    if (lan.lan == 'Not supported' || isNaN(req.params.bookid) || isNaN(req.params.chapterid))
         throw Error('Not valid');
 
     let sql = `SELECT Hadith_ID,${lan.lan},${lan.sanad} FROM Ahadith where Book_ID = ${req.params.bookid} and Chapter_ID = ${req.params.chapterid}`;
